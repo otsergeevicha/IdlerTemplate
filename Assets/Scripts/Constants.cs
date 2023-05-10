@@ -1,8 +1,8 @@
 ﻿public static class Constants
 {
     public const float Epsilon = .001f;
+    public const float RateAlfaCurtain = .03f;
     public const string InitialScene = "Initial";
-    public const string PrefabPlayer = "Player/Hero";
-    public const string PrefabHud = "Canvases/Hud";
-    public const string InitialPointTag = "InitialPoint";
+    public const string PlayerPath = "Player/Hero";
+    public const string HudPath = "Canvases/Hud";
 }
