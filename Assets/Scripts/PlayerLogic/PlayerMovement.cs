@@ -1,5 +1,4 @@
-﻿using CameraLogic;
-using Infrastructure;
+﻿using Infrastructure;
 using Plugins.MonoCache;
 using Services.Inputs;
 using UnityEngine;
@@ -22,13 +21,7 @@ namespace PlayerLogic
             _controller = GetComponent<CharacterController>();
             _inputService = Game.InputService;
         }
-
-        private void Start()
-        {
-            _camera = Camera.main;
-            CameraFollow();
-        }
-
+        
         protected override void Run()
         {
             _movementVector = Vector3.zero;
@@ -52,8 +45,5 @@ namespace PlayerLogic
 
         protected override void OnDisabled() => 
             _inputService.OffMoveControls();
-        
-        private void CameraFollow() => 
-            _camera.GetComponent<CameraFollow>().Follow(gameObject);
     }
 }

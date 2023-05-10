@@ -15,4 +15,4 @@ namespace Services.Inputs
         public Vector2 Axis => 
             _playerInput.Player.Move.ReadValue<Vector2>();
     }
-}
+}  
