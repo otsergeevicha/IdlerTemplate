@@ -8,9 +8,10 @@ namespace Infrastructure
     {
         [SerializeField] private CanvasGroup _curtain;
 
-        private readonly WaitForSeconds _waitSeconds = new (Constants.RateAlfaCurtain);
-    
-        private void Awake() => 
+        private readonly WaitForSeconds _waitSeconds = new(Constants.RateAlfaCurtain);
+        private Coroutine _coroutine;
+
+        private void Awake() =>
             DontDestroyOnLoad(this);
 
         public void Show()
@@ -19,7 +20,7 @@ namespace Infrastructure
             _curtain.alpha = 1;
         }
 
-        public void Hide() =>
+        public void Hide() => 
             StartCoroutine(DoFadeIn());
 
         private IEnumerator DoFadeIn()
@@ -29,7 +30,7 @@ namespace Infrastructure
                 _curtain.alpha -= Constants.RateAlfaCurtain;
                 yield return _waitSeconds;
             }
-        
+
             gameObject.SetActive(false);
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Infrastructure;
+using Infrastructure.Services;
 using Plugins.MonoCache;
 using Services.Inputs;
 using UnityEngine;
@@ -19,7 +20,7 @@ namespace PlayerLogic
         private void Awake()
         {
             _controller = GetComponent<CharacterController>();
-            _inputService = Game.InputService;
+            _inputService = AllServices.Container.Single<IInputService>();
         }
         
         protected override void Run()

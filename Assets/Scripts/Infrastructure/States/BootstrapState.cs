@@ -1,21 +1,24 @@
-﻿using Services.Inputs;
+﻿using Infrastructure.Factory;
+using Infrastructure.Services;
+using Services.Inputs;
 
-namespace Infrastructure
+namespace Infrastructure.States
 {
     public class BootstrapState : IState
     {
         private readonly GameStateMachine _stateMachine;
-        private SceneLoader _sceneLoader;
+        private readonly SceneLoader _sceneLoader;
 
         public BootstrapState(GameStateMachine stateMachine, SceneLoader sceneLoader)
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
+            
+            RegisterServices();
         }
 
         public void Enter()
         {
-            RegisterServices();
             _sceneLoader.LoadScene(Constants.InitialScene, EnterLoadLevel);
         }
 
@@ -30,10 +33,9 @@ namespace Infrastructure
 
         private void RegisterServices()
         {
-            Game.InputService = RegisterInputService();
+            AllServices.Container.RegisterSingle<IInputService>(new InputService());
+            AllServices.Container.RegisterSingle<IAssetsProvider>(new AssetsProvider());
+            AllServices.Container.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssetsProvider>()));
         }
-
-        private static InputService RegisterInputService() => 
-            new InputService();
     }
 }

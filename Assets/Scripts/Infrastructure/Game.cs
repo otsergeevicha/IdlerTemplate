@@ -1,15 +1,12 @@
-﻿using Services.Inputs;
+﻿using Infrastructure.States;
 
 namespace Infrastructure
 {
     public class Game
     {
-        public static IInputService InputService;
-        public GameStateMachine StateMachine;
+        public readonly GameStateMachine StateMachine;
 
-        public Game(LoadingCurtain loadingCurtain)
-        {
+        public Game(LoadingCurtain loadingCurtain) => 
             StateMachine = new GameStateMachine(new SceneLoader(), loadingCurtain);
-        }
     }
 }

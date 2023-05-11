@@ -2,7 +2,7 @@
 
 namespace Infrastructure
 {
-    public class AssetProvider : IAssetProvider
+    public class AssetsProvider : IAssetsProvider
     {
         public GameObject InstantiateEntity(string path)
         {
