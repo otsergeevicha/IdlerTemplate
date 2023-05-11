@@ -1,7 +1,7 @@
-﻿using Infrastructure.Services;
+﻿using Services.ServiceLocator;
 using UnityEngine;
 
-namespace Infrastructure.Factory
+namespace Services.Factory
 {
     public interface IGameFactory : IService
     {

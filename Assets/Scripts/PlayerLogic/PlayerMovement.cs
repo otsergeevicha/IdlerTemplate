@@ -1,7 +1,7 @@
 ﻿using Infrastructure;
-using Infrastructure.Services;
 using Plugins.MonoCache;
 using Services.Inputs;
+using Services.ServiceLocator;
 using UnityEngine;
 
 namespace PlayerLogic

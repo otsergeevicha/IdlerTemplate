@@ -1,4 +1,6 @@
-﻿namespace Infrastructure.States
+﻿using Services.StateMachine;
+
+namespace Infrastructure.GameAI.StateMachine.States
 {
     public class GameLoopState : IState
     {

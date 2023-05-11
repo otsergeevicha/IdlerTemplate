@@ -5,4 +5,5 @@
     public const string InitialScene = "Initial";
     public const string PlayerPath = "Player/Hero";
     public const string HudPath = "Canvases/Hud";
+    public const string Key = "SaveLoad";
 }

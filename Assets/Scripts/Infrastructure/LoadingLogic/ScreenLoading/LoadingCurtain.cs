@@ -2,7 +2,7 @@ using System.Collections;
 using Plugins.MonoCache;
 using UnityEngine;
 
-namespace Infrastructure
+namespace Infrastructure.LoadingLogic.ScreenLoading
 {
     public class LoadingCurtain : MonoCache
     {

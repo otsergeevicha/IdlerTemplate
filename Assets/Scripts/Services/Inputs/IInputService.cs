@@ -1,4 +1,4 @@
-﻿using Infrastructure.Services;
+﻿using Services.ServiceLocator;
 using UnityEngine;
 
 namespace Services.Inputs

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Infrastructure
+namespace Infrastructure.LoadingLogic
 {
     public class SceneLoader
     {

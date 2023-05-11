@@ -1,7 +1,7 @@
 ﻿using Plugins.MonoCache;
 using UnityEngine;
 
-namespace Infrastructure
+namespace Infrastructure.LoadingLogic
 {
     public class GameRunner : MonoCache
     {

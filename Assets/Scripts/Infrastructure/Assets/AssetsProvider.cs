@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Services.Assets;
+using UnityEngine;
 
-namespace Infrastructure
+namespace Infrastructure.Assets
 {
     public class AssetsProvider : IAssetsProvider
     {

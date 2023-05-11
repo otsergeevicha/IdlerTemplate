@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Services
+﻿namespace Services.ServiceLocator
 {
     public class AllServices
     {

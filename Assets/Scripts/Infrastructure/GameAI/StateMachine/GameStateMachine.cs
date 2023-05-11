@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Infrastructure.Factory;
-using Infrastructure.Services;
+using Infrastructure.GameAI.StateMachine.States;
+using Infrastructure.LoadingLogic;
+using Infrastructure.LoadingLogic.ScreenLoading;
+using Services.Factory;
+using Services.ServiceLocator;
+using Services.StateMachine;
 
-namespace Infrastructure.States
+namespace Infrastructure.GameAI.StateMachine
 {
     public class GameStateMachine
     {

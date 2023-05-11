@@ -1,8 +1,15 @@
-﻿using Infrastructure.Factory;
-using Infrastructure.Services;
+﻿using Infrastructure.Assets;
+using Infrastructure.Factory;
+using Infrastructure.LoadingLogic;
+using Infrastructure.SaveLoadLogic;
+using Services.Assets;
+using Services.Factory;
 using Services.Inputs;
+using Services.SaveLoadLogic;
+using Services.ServiceLocator;
+using Services.StateMachine;
 
-namespace Infrastructure.States
+namespace Infrastructure.GameAI.StateMachine.States
 {
     public class BootstrapState : IState
     {
@@ -13,7 +20,7 @@ namespace Infrastructure.States
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
-            
+
             RegisterServices();
         }
 
@@ -33,6 +40,7 @@ namespace Infrastructure.States
 
         private void RegisterServices()
         {
+            AllServices.Container.RegisterSingle<ISave>(new SaveLoad());
             AllServices.Container.RegisterSingle<IInputService>(new InputService());
             AllServices.Container.RegisterSingle<IAssetsProvider>(new AssetsProvider());
             AllServices.Container.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssetsProvider>()));

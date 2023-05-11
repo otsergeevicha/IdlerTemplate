@@ -1,8 +1,9 @@
-﻿using Infrastructure.States;
+﻿using Infrastructure.GameAI.StateMachine.States;
+using Infrastructure.LoadingLogic.ScreenLoading;
 using Plugins.MonoCache;
 using UnityEngine;
 
-namespace Infrastructure
+namespace Infrastructure.LoadingLogic
 {
     public class GameBootstrapper : MonoCache
     {

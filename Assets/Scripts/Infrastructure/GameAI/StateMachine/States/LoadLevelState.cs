@@ -1,8 +1,11 @@
 ﻿using CameraLogic;
-using Infrastructure.Factory;
+using Infrastructure.LoadingLogic;
+using Infrastructure.LoadingLogic.ScreenLoading;
+using Services.Factory;
+using Services.StateMachine;
 using UnityEngine;
 
-namespace Infrastructure.States
+namespace Infrastructure.GameAI.StateMachine.States
 {
     public class LoadLevelState : IPayloadedState<string>
     {

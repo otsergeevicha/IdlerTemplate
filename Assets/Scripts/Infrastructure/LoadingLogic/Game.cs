@@ -1,6 +1,8 @@
-﻿using Infrastructure.States;
+﻿using Infrastructure.GameAI;
+using Infrastructure.GameAI.StateMachine;
+using Infrastructure.LoadingLogic.ScreenLoading;
 
-namespace Infrastructure
+namespace Infrastructure.LoadingLogic
 {
     public class Game
     {
