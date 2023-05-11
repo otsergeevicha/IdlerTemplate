@@ -4,6 +4,6 @@ namespace Services.SaveLoadLogic
 {
     public interface ISave : IService
     {
-        void Save();
+        void UpdateDate<TData>(TData data);
     }
 }
