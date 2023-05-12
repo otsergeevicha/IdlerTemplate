@@ -8,6 +8,7 @@ using Services.Inputs;
 using Services.SaveLoadLogic;
 using Services.ServiceLocator;
 using Services.StateMachine;
+using UnityEngine;
 
 namespace Infrastructure.GameAI.StateMachine.States
 {
